@@ -7,6 +7,7 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import Language from '../Components/Language.vue';
 
 defineProps({
     title: String,
@@ -49,10 +50,10 @@ const logout = () => {
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    {{$t('Dashboard')}}
                                 </NavLink>
                                 <NavLink :href="route('products.index')" :active="route().current('products.index')">
-                                    Product
+                                    {{$t('Product')}}
                                 </NavLink>
                             </div>
                         </div>
@@ -115,6 +116,8 @@ const logout = () => {
                                     </template>
                                 </Dropdown>
                             </div>
+
+                            <Language align="left" @logout-click="$emit('logout')" :user="user" :userRole="userRole"/>
 
                             <!-- Settings Dropdown -->
                             <div class="ml-3 relative">

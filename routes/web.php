@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::controller(LocalizationController::class)->group(function () {
+        Route::post('lang/{language}', 'switch')->name('localization.switch');
+    });
+
+
     Route::controller(ProductController::class)->prefix('products')->group(function () {
         Route::get('/', 'index')->name('products.index');
         Route::get('get-data', 'getData')->name('products.getdata');

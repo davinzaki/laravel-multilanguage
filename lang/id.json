@@ -1,0 +1,30 @@
+{
+    "Dashboard": "Dasbor",
+    "Product": "Produk",
+    "Products": "Produk",
+
+    "Quantity": "Kuantitas",
+    "Price": "Harga",
+    "Description": "Deskripsi",
+
+    "Documentation": "Dokumentasi",
+    "Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end." : "Laravel memiliki dokumentasi yang luar biasa yang mencakup setiap aspek kerangka kerja. Apakah Anda baru mengenal kerangka kerja atau memiliki pengalaman sebelumnya, kami sarankan untuk membaca semua dokumentasi dari awal hingga akhir.",
+
+    "Explore the documentation" : "Jelajahi dokumentasi",
+
+    "Laracasts": "Laracasts",
+    "Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process." : "Laracasts menawarkan ribuan tutorial video tentang pengembangan Laravel, PHP, dan JavaScript. Periksa mereka, lihat sendiri, dan tingkatkan keterampilan pengembangan Anda secara masif dalam prosesnya.",
+
+
+    "Start watching Laracasts" : "Mulai menonton Laracasts",
+
+    "Tailwind": "Tailwind",
+    "Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips." : "Laravel Jetstream dibangun dengan Tailwind, kerangka CSS utilitas yang luar biasa yang tidak menghalangi Anda. Anda akan kagum betapa mudahnya Anda dapat membangun dan mempertahankan desain segar dan modern dengan kerangka kerja yang luar biasa ini di ujung jari Anda.",
+
+    "Authentication" : "Otentikasi",
+    "Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started with what matters most: building your application." : "Tampilan otentikasi dan pendaftaran disertakan dengan Laravel Jetstream, serta dukungan untuk verifikasi email pengguna dan pengaturan ulang kata sandi yang terlupakan. Jadi, Anda bebas untuk memulai dengan apa yang paling penting: membangun aplikasi Anda.",
+
+
+    "Welcome to your Jetstream application!" : "Selamat datang di aplikasi Jetstream Anda!",
+    "Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravelecosystem to be a breath of fresh air. We hope you love it." : "Laravel Jetstream menyediakan titik awal yang indah dan kuat untuk aplikasi Laravel Anda berikutnya. Laravel dirancang untuk membantu Anda membangun aplikasi Anda menggunakan lingkungan pengembangan yang sederhana, kuat, dan menyenangkan. Kami percaya Anda harus mencintai mengekspresikan kreativitas Anda melalui pemrograman, jadi kami telah menghabiskan waktu dengan cermat merancang ekosistem Laravel untuk menjadi udara segar. Kami harap Anda menyukainya."
+}

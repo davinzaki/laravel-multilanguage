@@ -22,7 +22,7 @@ const props = defineProps({
                             class="px-4 h-12 whitespace-nowrap border-t border-b border-slate-200" :class="{'fixed-header': freezeTable && index === 0}">
                             <div class="font-semibold text-left" :class="{'!text-center': freezeTable && index > 0}">
 
-                                {{ head }}
+                                {{ $t(head) }}
                             </div>
                         </th>
                     </tr>

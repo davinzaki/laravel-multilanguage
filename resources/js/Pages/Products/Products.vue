@@ -53,12 +53,21 @@ onMounted(() => {
     <AppLayout title="Products">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Products
+                {{$t('Products')}}
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto ">
+                <div v-if="canLogin" class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
+                    <Link v-if="$page.props.auth.user" :href="route('products.index')" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</Link>
+
+                    <template v-else>
+                        <Link :href="route('login')" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</Link>
+
+                        <Link v-if="canRegister" :href="route('register')" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</Link>
+                    </template>
+                </div>
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                         <DataTable :heads="heads">
                             <tr v-if="isLoading">
@@ -72,7 +81,6 @@ onMounted(() => {
                             <tr v-else-if="query.length === 0 && !isLoading">
                                 <td class="overflow-hidden my-2" :colspan="heads.length">
                                     <div class="flex items-center flex-col w-full my-32">
-                                        <VEmpty />
                                         <div
                                             class="mt-9 text-slate-500 text-xl md:text-xl font-medium"
                                         >
