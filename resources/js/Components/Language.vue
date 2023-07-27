@@ -1,6 +1,7 @@
 <script setup>
 import axios from "axios"
-// import { notify } from "notiwind"
+import { notify } from "notiwind"
+import { useToast } from "vue-toastification"
 import { string } from 'vue-types';
 import { ref, onMounted, onUnmounted } from 'vue';
 import { loadLanguageAsync, getActiveLanguage } from 'laravel-vue-i18n';
@@ -9,6 +10,7 @@ const dropdownOpen = ref(false)
 const trigger = ref(null)
 const dropdown = ref(null)
 const locale = ref(null)
+const toast = useToast()
 const props = defineProps({
     align: string()
 })
@@ -19,28 +21,24 @@ const clickHandler = ({ target }) => {
     dropdownOpen.value = false
 }
 
-// close if the esc key is pressed
-const keyHandler = ({ keyCode }) => {
-    if (!dropdownOpen.value || keyCode !== 27) return
-    dropdownOpen.value = false
-}
-
 const setLocale = async (lang) => {
     loadLanguageAsync(lang)
     axios.post(route('localization.switch', {'language': lang}))
+    toast.success('Language changed to ' + lang, {
+        timeout: 200,
+    })
+    console.log(lang)
     locale.value = lang
     dropdownOpen.value = !dropdownOpen.value
 }
 
 onMounted(() => {
     document.addEventListener('click', clickHandler)
-    document.addEventListener('keydown', keyHandler)
     locale.value = getActiveLanguage()
 })
 
 onUnmounted(() => {
     document.removeEventListener('click', clickHandler)
-    document.removeEventListener('keydown', keyHandler)
 })
 </script>
 

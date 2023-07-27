@@ -20,7 +20,9 @@
     },
     "dependencies": {
         "laravel-vue-i18n": "^2.6.1",
+        "notiwind": "^2.0.2",
         "vue-country-flag-next": "^2.3.2",
+        "vue-toastification": "^2.0.0-rc.5",
         "vue-types": "^5.1.1"
     }
 }

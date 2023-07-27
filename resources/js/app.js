@@ -6,7 +6,9 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { i18nVue } from 'laravel-vue-i18n'
+import Notifications from 'notiwind'
 import CountryFlag from "vue-country-flag-next";
+import Toast from "vue-toastification";
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -21,6 +23,8 @@ createInertiaApp({
                     return await langs[`../../lang/${lang}.json`]();
                 }
             })
+            .use(Toast)
+            .use(Notifications)
             .use(plugin)
             .use(ZiggyVue, Ziggy)
             .component('country-flag', CountryFlag)

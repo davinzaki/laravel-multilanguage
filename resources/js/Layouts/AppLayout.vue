@@ -117,7 +117,7 @@ const logout = () => {
                                 </Dropdown>
                             </div>
 
-                            <Language align="left" @logout-click="$emit('logout')" :user="user" :userRole="userRole"/>
+                            <Language />
 
                             <!-- Settings Dropdown -->
                             <div class="ml-3 relative">
